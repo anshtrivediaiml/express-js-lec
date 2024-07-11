@@ -24,10 +24,30 @@ app.get('/marks',(req,res)=>{
     var english=parseInt(req.query.english);
     var maths=parseInt(req.query.maths);
     var science=parseInt(req.query.science);
+    var total=english+maths+science;
+    var avg=total/3;
+    var grade;
+    var color;
+    if(avg>=80){
+        grade='A';
+        color="green";
+    }
+    else if(grade>=60){
+        grade='B';
+        color="yellow";
+    }
+    else if(grade>=40){
+        grade='C';
+        color="orange";
+    }
+    else{
+        grade='F';
+        color="red";
+    }
 
     res.send(`<h1>Your Result:</h1> 
-        <table border=2>
-        <thead>
+        <table border=12 style="border-color:${color};" cellpadding=15  align=center>
+        <thead style="background-color:#aeae">
         <th>Subject</th>
         <th>Marks</th>
         </thead>
@@ -47,8 +67,12 @@ app.get('/marks',(req,res)=>{
         </tbody>
         <tfooter>
         <tr>
-        <td>Total</td>
-        <td>${maths+science+english}</td>
+        <td><b>Total</b></td>
+        <td><b>${total}</b></td>
+        </tr>
+        <tr style="background-color:#aeae">
+        <td><b>Grade</b></td>
+        <td><b>${grade}</b></td>
         </tr>
         </tfooter>
  

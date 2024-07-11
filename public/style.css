@@ -1,0 +1,43 @@
+body{
+    background-color: blanchedalmond;
+    font-family: Arial, sans-serif;
+}
+
+form{
+
+    h1{
+        color:blue;
+
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+    background-color: rgb(146, 98, 98);
+    backdrop-filter: blur(10px);
+    padding:10px;
+    border-radius: 10px;
+    max-width:300px;
+    margin-left: auto; 
+    margin-right: auto;
+    input{
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        padding:12px;
+        font-size: medium;
+        width: 100%;
+        background-color: rgb(198, 203, 110);
+    }
+    button{
+        display: block;
+        background-color: burlywood;
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        font-size: medium;
+        margin-top: 12px;
+        border:2px solid black
+    }
+}
